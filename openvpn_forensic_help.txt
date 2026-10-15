@@ -1,3 +1,13 @@
  nano openvpn_forensics.sh
  
  sudo bash openvpn_forensics.sh -c INC-2025-0042 -o /var/forensics
+
+# paste the openvp script script then 
+
+sed -i 's/\r$//' openvpn_forensics.sh
+chmod +x openvpn_forensics.sh
+./openvpn_forensics.sh
+
+
+sudo cp /var/forensics/CASE-20261015T110653Z_nustopenvpn_20261015T110653Z.tar.gz  /home/openvpn/Downloads
+[openvpn@nustopenvpn Downloads]$ sudo tar -xzvf CASE-20261015T110653Z_nustopenvpn_20261015T110653Z.tar.gz 
